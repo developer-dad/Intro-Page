@@ -7,3 +7,51 @@
   z-index: 0;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.intro-card {
+  padding: 40px 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 200, 255, 0.4);
+  transform-style: preserve-3d;
+  transition: transform .3s ease;
+}
+
+.intro-card:hover {
+  box-shadow: 0 0 60px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+}
