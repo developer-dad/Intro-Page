@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="contact.css">
     <title>Contact Me ✉️</title>
 </head>
+
 <body>
     <canvas id="bgCanvas"></canvas>
 
+    <div class="reveal">
+        <h1 class="welcome">Let's <span class="highlight">Connect</span></h1>
+    </div>
     <div class="hero">
         <div class="intro-card" id="card">
-            <h1 class="welcome">Let's <span class="highlight">Connect</span></h1>
+            <div class="animation">
+                <p class="intro">Let’s turn coffee into <span class="special">code</span> and ideas into <span
+                        class="special">reality</span> — say hello below!</p>
+                <!-- <p>Got an Idea, a Project, or just bhaichara!! Drop me a message — I’d love to hear from you!</p> -->
+                <!-- <p>Your ideas deserve a listener — my inbox is always awake!</p> -->
+                <form action="https://formspree.io/f/xpwjolvj" method="POST" class="contact-form">
+                    <input class="name" type="text" name="name" placeholder="Your Name" required>
+                    <input class="email" type="email" name="email" placeholder="Your Email" required>
+                    <textarea class="textarea" name="message" rows="7" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="formBtn">Send Message</button>
+                </form>
+            </div>
         </div>
+    </div>
+    <div class="freelance">
+        <p>Open to <span>freelance</span> work and creative <span>collaborations</span>.</p>
     </div>
 
     <script src="contact.js"></script>
 </body>
+
 </html>
 
 <!--
