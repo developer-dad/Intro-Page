@@ -1,9 +1,10 @@
- const canvas = document.getElementById("bgCanvas");
+const canvas = document.getElementById("bgCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth; canvas.height = window.innerHeight;
 
 let stars = [];
-for (let i = 0; i < 120; i++) {
+let starCount = window.innerWidth <= 600 ? 50 : 120;
+for (let i = 0; i < starCount; i++) {
   stars.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
@@ -40,6 +41,8 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate(); 
+
+
 
 // 3D Card Hover Effect
 const card = document.getElementById("card");
