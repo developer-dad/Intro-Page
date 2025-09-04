@@ -178,6 +178,10 @@ html {
   text-shadow: 0 0 15px #00eaff;
 }
 
+.mobile-line{
+  display: none;
+}
+
 @media (max-width: 600px) {
   .hero {
     height: 100%;
@@ -191,4 +195,36 @@ html {
     backdrop-filter: blur(11px);
   }
 
+  .intro{
+    font-size: 18px;
+  }
+
+  .mobile-line{
+    display: block;
+    position: relative;
+    border: 1px solid #ffffffbe;
+    margin: 28px 0px;
+    box-shadow: 0px 0px 8px #00eaff;
+    width: 100%;
+  }
+
+  .name {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .email {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .formBtn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .freelance p{
+    font-size: 11px;
+    top: -50px;
+  }
 }
