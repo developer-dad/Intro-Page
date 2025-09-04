@@ -1,4 +1,4 @@
-* { 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -47,7 +47,7 @@ html {
 .intro-card:hover {
   box-shadow: 0 0 60px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
 }
- 
+
 h1 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -67,13 +67,17 @@ h1 {
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 2s forwards 1s;
+  animation: fadeIn 2s forwards 400ms;
 }
 
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
+}
+
+.mobile-line{
+  display: none;
 }
 
 .btns {
@@ -116,11 +120,38 @@ h1 {
   .intro-card {
     height: 75%;
     width: 80%;
+    padding: 20px 30px;
+    backdrop-filter: blur(11px);
   }
 
-  .btns{
-    flex-direction: column;
-    gap: 10px;
+  .reveal {
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 30px 0px;
   }
-  
+
+  .typing {
+    margin: 30px 0px;
+  }
+
+  .name {
+    font-size: 3rem;
+    margin: 1px 45px;
+    text-align: center;
+  }
+
+  .mobile-line{
+    display: block;
+    position: relative;
+    border: 1px solid #ffffffbe;
+    margin-top: 28px;
+    box-shadow: 0px 0px 8px #00eaff;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
 }
