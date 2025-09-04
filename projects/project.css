@@ -32,6 +32,8 @@ html {
 }
 
 .intro-card {
+  height: 40%;
+  width: 55%;
   padding: 40px 60px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
@@ -40,6 +42,10 @@ html {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 200, 255, 0.4);
   transform-style: preserve-3d;
   transition: transform .3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-card:hover {
@@ -54,4 +60,19 @@ h1 {
 .highlight {
   color: #00eaff;
   text-shadow: 0 0 15px #00eaff;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 100%;
+    width: 100%;
+  }
+
+  .intro-card {
+    height: 75%;
+    width: 80%;
+    padding: 20px 30px;
+    backdrop-filter: blur(11px);
+  }
+  
 }
