@@ -40,7 +40,7 @@ function animate() {
   });
   requestAnimationFrame(animate);
 }
-animate(); 
+animate();
 
 
 
@@ -52,3 +52,14 @@ document.addEventListener("mousemove", (e) => {
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 });
 document.addEventListener("mouseleave", () => card.style.transform = "rotateY(0) rotateX(0)");
+
+function confirmDownload() {
+  let confirmAction = confirm("Do you want to download resume?");
+  if (confirmAction) {
+    // Trigger the download
+    const link = document.createElement("a");
+    link.href = "files/Aditya_Soni_Resume.pdf"; // path to your resume
+    link.download = "Aditya_Soni_Resume.pdf";
+    link.click();
+  }
+}
