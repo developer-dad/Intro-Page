@@ -47,7 +47,7 @@ html {
 .intro-card:hover {
   box-shadow: 0 0 60px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
 }
-
+ 
 h1 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -105,4 +105,22 @@ h1 {
 .btn.ghost:hover {
   background: white;
   color: #000;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 100%;
+    width: 100%;
+  }
+
+  .intro-card {
+    height: 75%;
+    width: 80%;
+  }
+
+  .btns{
+    flex-direction: column;
+    gap: 10px;
+  }
+  
 }
