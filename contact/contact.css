@@ -8,7 +8,7 @@
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
-* { 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -46,15 +46,43 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: form-ani 2s ease 100ms forwards;
+}
+
+@keyframes form-ani {
+
+  0% {
+    height: 40%;
+    width: 55%;
+  }
+
+  100% {
+    height: 60%;
+    width: 55%;
+  }
 }
 
 .intro-card:hover {
   box-shadow: 0 0 60px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
 }
 
-h1 {
+.welcome{
   font-size: 3rem;
   margin-bottom: 10px;
+  animation: welcome 1.5s ease 500ms 1 forwards;
+}
+
+@keyframes welcome {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+  
 }
 
 .highlight {
@@ -74,5 +102,5 @@ h1 {
     padding: 20px 30px;
     backdrop-filter: blur(11px);
   }
-  
+
 }
