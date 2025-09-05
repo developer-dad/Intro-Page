@@ -1,4 +1,4 @@
- const canvas = document.getElementById("bgCanvas");
+const canvas = document.getElementById("bgCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth; canvas.height = window.innerHeight;
 
@@ -40,7 +40,7 @@ function animate() {
   });
   requestAnimationFrame(animate);
 }
-animate(); 
+animate();
 
 // 3D Card Hover Effect
 const card = document.getElementById("card");
@@ -50,3 +50,29 @@ document.addEventListener("mousemove", (e) => {
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 });
 document.addEventListener("mouseleave", () => card.style.transform = "rotateY(0) rotateX(0)");
+
+
+const projectOne = document.createElement("button");
+projectOne.innerText = "Click to view Project";
+projectOne.className = "project-one";
+
+const firstProject = document.getElementById("first-project");
+const originalcontent = firstProject.innerHTML;
+let showingimage = false;
+
+firstProject.addEventListener("click", () => {
+  if (!showingimage) {
+    firstProject.innerHTML = `<img src="../images/first-project.png" alt="Project Image">`;
+    firstProject.appendChild(projectOne);
+    showingimage = true;
+  }
+  else {
+    firstProject.innerHTML = originalcontent;
+    showingimage = false;
+  }
+})
+
+projectOne.addEventListener("click", (e) => {
+  e.stopPropagation();
+  window.open("https://rock-paper-scissor-eli3.onrender.com", "_blank");
+})

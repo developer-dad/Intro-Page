@@ -70,10 +70,11 @@ html {
   height: 40%;
   width: 55%;
   overflow: hidden;
-  padding: 40px 60px;
+  /* padding: 40px 60px; */
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   backdrop-filter: blur(20px);
+  padding: 40px 60px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 200, 255, 0.4);
   transform-style: preserve-3d;
   transition: transform .3s ease;
@@ -98,12 +99,6 @@ html {
 
 .intro-card:hover {
   box-shadow: 0 0 60px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
-}
-
-.first-project{
-  animation: animation 300ms ease 1200ms 1 forwards;
-  opacity: 0;
-  visibility: hidden;
 }
 
 /* intro card inside content coming animation */
@@ -140,6 +135,55 @@ html {
   margin-left: 30px;
 }
 
+.first-project{
+  animation: animation 300ms ease 1200ms 1 forwards;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.first-project img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.project-one{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 35%;
+  height: 22%;
+  border-radius: 22px;
+  font-size: 22px;
+  animation: projectone 200ms ease-in-out 700ms 1 forwards;
+}
+
+.project-one:hover{
+  box-shadow: 0 0 100px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
+}
+
+@keyframes projectone {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+}
+
 /* click to experience div */
 .experience p{
   color: #fff;
@@ -169,3 +213,4 @@ html {
   }
   
 }
+
