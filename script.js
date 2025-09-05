@@ -1,6 +1,6 @@
 // Typing Effect
 const typingText = document.getElementById("typing");
-const phrases = ["Frontend Developer 💻", "UI/UX Enthusiast 🎨", "Problem Solver 🔑", "Tech Nerd 👾"];
+const phrases = ["Frontend Developer 💻", "AI Enthusiast 🤖", "Problem Solver 🔑", "Tech Nerd 👾"];
 let i = 0, j = 0, deleting = false;
 
 function typeEffect() {

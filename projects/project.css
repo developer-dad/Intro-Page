@@ -35,7 +35,7 @@ html {
 .welcome{
   font-size: 3rem;
   margin-bottom: 10px;
-  animation: welcome 500ms ease 1700ms 1 forwards;
+  animation: welcome 250ms ease 900ms 1 forwards;
 }
 
 /* my project disappearing animation */
@@ -79,7 +79,7 @@ html {
   transition: transform .3s ease;
   display: flex;
   flex-direction: column;
-  animation: project-ani 2s ease 100ms forwards;
+  animation: project-ani 1250ms ease 100ms forwards;
 }
 
 /* intro card size increasing animation */
@@ -101,7 +101,7 @@ html {
 }
 
 .first-project{
-  animation: animation 500ms ease 1750ms 1 forwards;
+  animation: animation 300ms ease 1200ms 1 forwards;
   opacity: 0;
   visibility: hidden;
 }
@@ -127,8 +127,8 @@ html {
 
 .first-project h3{
   margin-top: 25px;
-  opacity: 0.8;
-  font-size: 20px;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .outer-list{
