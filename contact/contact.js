@@ -58,7 +58,7 @@ function confirmDownload() {
   if (confirmAction) {
     // Trigger the download
     const link = document.createElement("a");
-    link.href = "files/Aditya_Soni_Resume.pdf"; // path to your resume
+    link.href = "../files/Aditya_Soni_Resume.docx"; // path to your resume
     link.download = "Aditya_Soni_Resume.pdf";
     link.click();
   }

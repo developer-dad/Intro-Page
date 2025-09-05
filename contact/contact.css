@@ -1,3 +1,4 @@
+/* Background stars animation */
 #bgCanvas {
   position: fixed;
   top: 0;
@@ -22,6 +23,40 @@ html {
   color: white;
 }
 
+/* Welcome let's Connect message */
+.reveal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.welcome{
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: welcome 500ms ease 1700ms 1 forwards;
+}
+
+/* let's connect disappearing animation */
+@keyframes welcome {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.highlight {
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+/* Hero card main div (container) */
 .hero {
   height: 100%;
   display: flex;
@@ -47,14 +82,43 @@ html {
   animation: form-ani 1200ms ease 100ms forwards;
 }
 
-.reveal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+/* intro card size increasing animation */
+@keyframes form-ani {
+
+  0% {
+    height: 40%;
+    width: 55%;
+  }
+
+  100% {
+    height: 60%;
+    width: 55%;
+  }
 }
 
+.intro-card:hover {
+  box-shadow: 0 0 60px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
+}
+
+.animation{
+  animation: animation 500ms ease 1750ms 1 forwards;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* intro card inside content coming animation */
+@keyframes animation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* message me line */
 .intro{
   color: #ffffff;
   font-size: 24px;
@@ -65,63 +129,16 @@ html {
   text-shadow: 0 0 15px #00eaff;
 }
 
-.freelance p{
-  color: #fff;
-  font-size: 13px;
-  text-align: center;
-  font-style: italic;
-  position: relative;
-  top: -50px;
+.mobile-line{
+  display: none;
 }
 
-.freelance span{
-  color: #00eaff;
-  text-shadow: 0 0 15px #00eaff;
-}
-
+/* form */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 40px;
-}
- 
-.resume{
-  position: absolute;
-  animation: resume 2.5s ease 1.5s 1 forwards;
-}
-
-@keyframes resume {
-  
-  0% {
-    top: -42px;
-    right: -197px;
-  }
-
-  100% {
-    top: 412px;
-    right: 20px;
-  }
-
-}
-
-/* @keyframes resume {
-  0%   { transform: scale(0.3); opacity: 0; }
-  40%  { transform: scale(1.4); opacity: 1; }
-  60%  { transform: scale(0.9); }
-  80%  { transform: scale(1.1); }
-  100% { transform: scale(1); }
-} */
-
-.resumeBtn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  background: #00adbd;
-  color: #000;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .contact-form input,
@@ -159,66 +176,59 @@ html {
   background: #00eaff;
   box-shadow: 0 0 5px rgba(0, 200, 255, 0.7), 0 0 3px rgba(255, 0, 200, 0.5);
 }
+ 
+.resume{
+  position: absolute;
+  animation: resume 2.5s ease 1.5s 1 forwards;
+}
 
-@keyframes form-ani {
-
+/* resume button animation */
+@keyframes resume {
+  
   0% {
-    height: 40%;
-    width: 55%;
+    top: -42px;
+    right: -197px;
   }
 
   100% {
-    height: 60%;
-    width: 55%;
-  }
-}
-
-.intro-card:hover {
-  box-shadow: 0 0 60px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
-}
-
-.welcome{
-  font-size: 3rem;
-  margin-bottom: 10px;
-  animation: welcome 500ms ease 1700ms 1 forwards;
-}
-
-@keyframes welcome {
-
-  0% {
-    opacity: 1;
+    top: 412px;
+    right: 20px;
   }
 
-  100% {
-    opacity: 0;
-    display: none;
-  }
 }
 
-.animation{
-  animation: animation 500ms ease 1750ms 1 forwards;
-  opacity: 0;
-  visibility: hidden;
+/* @keyframes resume {
+  0%   { transform: scale(0.3); opacity: 0; }
+  40%  { transform: scale(1.4); opacity: 1; }
+  60%  { transform: scale(0.9); }
+  80%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+} */
+
+.resumeBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #00adbd;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-@keyframes animation {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
+/* freelance button text */
+.freelance p{
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  top: -50px;
 }
 
-.highlight {
+.freelance span{
   color: #00eaff;
   text-shadow: 0 0 15px #00eaff;
-}
-
-.mobile-line{
-  display: none;
 }
 
 @media (max-width: 600px) {

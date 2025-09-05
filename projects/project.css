@@ -1,3 +1,4 @@
+/* Background stars animation */
 #bgCanvas {
   position: fixed;
   top: 0;
@@ -22,6 +23,7 @@ html {
   color: white;
 }
 
+/* Welcome my project message */
 .reveal {
   position: absolute;
   top: 50%;
@@ -36,6 +38,7 @@ html {
   animation: welcome 500ms ease 1700ms 1 forwards;
 }
 
+/* my project disappearing animation */
 @keyframes welcome {
 
   0% {
@@ -53,6 +56,7 @@ html {
   text-shadow: 0 0 15px #00eaff;
 }
 
+/* Hero card main div (container) */
 .hero {
   height: 100%;
   display: flex;
@@ -65,20 +69,21 @@ html {
 .intro-card {
   height: 40%;
   width: 55%;
+  overflow: hidden;
   padding: 40px 60px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 200, 255, 0.4);
   transform-style: preserve-3d;
   transition: transform .3s ease;
   display: flex;
   flex-direction: column;
-  animation: form-ani 2s ease 100ms forwards;
+  animation: project-ani 2s ease 100ms forwards;
 }
 
-@keyframes form-ani {
+/* intro card size increasing animation */
+@keyframes project-ani {
  
   0% {
     height: 40%;
@@ -95,26 +100,57 @@ html {
   box-shadow: 0 0 60px rgba(0, 200, 255, 0.7), 0 0 30px rgba(255, 0, 200, 0.5);
 }
 
-.welcome{
-  font-size: 3rem;
-  margin-bottom: 10px;
-  animation: welcome 1.5s ease 500ms 1 forwards;
+.first-project{
+  animation: animation 500ms ease 1750ms 1 forwards;
+  opacity: 0;
+  visibility: hidden;
 }
 
-@keyframes welcome {
-
+/* intro card inside content coming animation */
+@keyframes animation {
   0% {
-    opacity: 1;
-  }
-
-  100% {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
-  
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
-.highlight {
+/* first project div */
+.first-project h1{
+  font-weight: 20px;
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+.first-project h3{
+  margin-top: 25px;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+.outer-list{
+  margin-top: 20px;
+  margin-left: 17px;
+}
+
+.inner-list{
+  margin-left: 30px;
+}
+
+/* click to experience div */
+.experience p{
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  top: -50px;
+}
+
+.experience span{
   color: #00eaff;
   text-shadow: 0 0 15px #00eaff;
 }
