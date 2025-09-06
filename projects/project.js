@@ -60,9 +60,16 @@ const firstProject = document.getElementById("first-project");
 const originalcontent = firstProject.innerHTML;
 let showingimage = false;
 
+let device = "first-project-desktop.jpg";
+if (window.innerWidth <= 600) {
+  device = "first-project-mobile.jpg";
+}else{
+  device = "first-project-desktop.jpg";
+}
+
 firstProject.addEventListener("click", () => {
   if (!showingimage) {
-    firstProject.innerHTML = `<img src="../images/first-project.png" alt="Project Image">`;
+    firstProject.innerHTML = `<img src=../images/${device}   alt="Project Image">`;
     firstProject.appendChild(projectOne);
     showingimage = true;
   }
