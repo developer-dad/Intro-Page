@@ -62,4 +62,4 @@ function confirmDownload() {
     link.download = "Aditya_Soni_Resume.pdf";
     link.click();
   }
-}
+} 
