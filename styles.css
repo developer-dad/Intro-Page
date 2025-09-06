@@ -162,9 +162,10 @@ h1 {
     font-size: 1.3rem;
     margin-bottom: 10px;
     text-align: left;
-    margin-top: -10px;
-    margin-left: -20px;
-    margin-bottom: 30px;
+    margin-top: -15px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    line-height: 50px;
   }
 
   .namehighlight {
@@ -172,11 +173,12 @@ h1 {
     text-shadow: 0 0 15px #00eaff;
     font-size: 3rem;
     text-align: center;
+    margin: 0px 20px;
   }
 
   .typing {
     font-size: 1rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #eee;
     min-height: 1.8rem;
   }
